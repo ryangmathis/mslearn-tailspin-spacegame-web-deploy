@@ -72,9 +72,9 @@ stages:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-    environment: dev
+    environment: rgm-dev
     variables:
-    - group: Release
+    - group: rgm-release
     strategy:
       runOnce:
         deploy:
@@ -95,9 +95,9 @@ stages:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-    environment: test
+    environment: rgm-test
     variables:
-    - group: 'Release'
+    - group: 'rgm-elease'
     strategy:
       runOnce:
         deploy:
@@ -118,9 +118,9 @@ stages:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-    environment: staging
+    environment: rgm-staging
     variables:
-    - group: 'Release'
+    - group: 'rgm-release'
     strategy:
       runOnce:
         deploy:
