@@ -97,7 +97,7 @@ stages:
       vmImage: 'ubuntu-20.04'
     environment: rgm-test
     variables:
-    - group: 'rgm-elease'
+    - group: 'rgm-release'
     strategy:
       runOnce:
         deploy:
