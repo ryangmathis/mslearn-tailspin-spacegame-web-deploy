@@ -28,6 +28,8 @@ stages:
     - task: Npm@1
       displayName: 'Run npm cache clean --force'
       inputs:
+        command: 'custom'
+        customCommand: 'cache clean --force'
         verbose: false
 
     - task: Npm@1
