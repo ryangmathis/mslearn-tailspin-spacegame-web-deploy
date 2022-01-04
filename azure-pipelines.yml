@@ -33,9 +33,15 @@ stages:
         verbose: false
 
     - task: Npm@1
+      displayName: 'Run npm install -g npm'
+      inputs:
+        command: 'custom'
+        customCommand: 'install -g npm'
+
+    - task: Npm@1
       displayName: 'Run npm install'
       inputs:
-        verbose: false
+        verbose: true
 
     - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
       displayName: 'Compile Sass assets'
